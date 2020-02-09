@@ -8,6 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>My Portfolio</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -24,7 +25,7 @@
 
     <!-- Navbar -->
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -34,15 +35,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#home" class="navbar-brand page-scroll">Adipati Ma'ruf Alamsyah</a>
+                <a id="nav-list" href="#home" class="navbar-brand page-scroll">Adipati Ma'ruf Alamsyah</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../../LatPhp/phpmvc/public/creation" class="page-scroll">Creation</a></li>
-                    <li><a href="#about" class="page-scroll">About</a></li>
-                    <li><a href="#portfolio" class="page-scroll">Portfolio</a></li>
-                    <li><a href="#contact" class="page-scroll">Contact</a></li>
+                    <li><a id="nav-list" href="../../LatPhp/phpmvc/public/creation" class="page-scroll">Creation</a i>
+                    </li>
+                    <li><a id="nav-list" href="#about" class="page-scroll">About</a></li>
+                    <li><a id="nav-list" href="#portfolio" class="page-scroll">Portfolio</a></li>
+                    <li><a id="nav-list" href="#contact" class="page-scroll">Contact</a></li>
 
 
                 </ul>
@@ -58,7 +60,7 @@
     <header class="jumbotron text-center">
         <img src="img/profile.jpg" alt="Adipati Ma'ruf Alamsyah" title="Adipati Ma'ruf Alamsyah" class="img-circle">
         <h1>Adipati Ma'ruf Alamsyah</h1>
-        <p>Mahasiswa | Marching Drummer | Web Developer</p>
+        <p>College Student | Marching Drummer | Programmer</p>
     </header>
     <!-- Akhir header jumbotron -->
 
@@ -117,39 +119,46 @@
 
             <div class="row">
                 <div class="col-sm-4">
-                    <a href="" class="thumbnail t1">
+                    <a href="#gambar-1" class="thumbnail t1">
                         <img src="img/portfolio/adipati1.jpg" alt="portfolio1" title="portfolio1">
                     </a>
+                    <a href="#" class="close" title="close">&times;</a>
                 </div>
 
+
                 <div class="col-sm-4">
-                    <a href="" class="thumbnail t1">
+                    <a href="#gambar-2" class="thumbnail t1">
                         <img src="img/portfolio/adipati2.JPG" alt="portfolio2" title="portfolio2">
                     </a>
+                    <a href="#" class="close" title="close">&times;</a>
                 </div>
 
                 <div class="col-sm-4">
-                    <a href="" class="thumbnail t1">
+                    <a href="#gambar-3" class="thumbnail t1">
                         <img src="img/portfolio/adipatinindya1.jpg" alt="portfolio3" title="portfolio3">
                     </a>
+                    <a href="#" class="close" title="close">&times;</a>
                 </div>
 
                 <div class="col-sm-4">
-                    <a href="" class="thumbnail t2">
+                    <a href="#gambar-4" class="thumbnail t2">
                         <img src="img/portfolio/adipatinindya2.jpg" alt="portfolio4" title="portfolio4">
                     </a>
+                    <a href="#" class="close" title="close">&times;</a>
                 </div>
 
                 <div class="col-sm-4">
-                    <a href="" class="thumbnail t2">
+                    <a href="#gambar-5" class="thumbnail t2">
                         <img src="img/portfolio/persona1.jpg" alt="portfolio5" title="portfolio5">
                     </a>
+                    <a href="#" class="close" title="close">&times;</a>
                 </div>
 
                 <div class="col-sm-4">
-                    <a href="" class="thumbnail t2">
+                    <a href="#gambar-6" class="thumbnail t2">
                         <img src="img/portfolio/raptor.png" alt="portfolio6" title="portfolio6">
                     </a>
+                    <a href="#" class="close" title="close">&times;</a>
                 </div>
             </div>
 
@@ -157,8 +166,58 @@
     </section>
     <!-- Akhir Portfolio -->
 
+    <!-- Overlay Portfolio -->
 
+    <div class="overlay" id="gambar-1">
+        <div class="kotak">
+            <a href="#gambar-6" class="prev"></a>
+            <img src="img/portfolio/adipati1.jpg" alt="Adipati">
+            <a href="#gambar-2" class="next"></a>
+            <a href="#portfolio" class="close" title="close">&times;</a>
+        </div>
+    </div>
+    <div class="overlay" id="gambar-2">
+        <div class="kotak">
+            <a href="#gambar-1" class="prev"></a>
+            <img src="img/portfolio/adipati2.JPG" alt="my Conga">
+            <a href="#gambar-3" class="next"></a>
+            <a href="#portfolio" class="close" title="close">&times;</a>
+        </div>
+    </div>
+    <div class="overlay" id="gambar-3">
+        <div class="kotak">
+            <a href="#gambar-2" class="prev"></a>
+            <img src="img/portfolio/adipatinindya1.jpg" alt="with Nindya">
+            <a href="#gambar-4" class="next"></a>
+            <a href="#portfolio" class="close" title="close">&times;</a>
+        </div>
+    </div>
+    <div class="overlay" id="gambar-4">
+        <div class="kotak">
+            <a href="#gambar-3" class="prev"></a>
+            <img src="img/portfolio/adipatinindya2.jpg" alt="Wood Two">
+            <a href="#gambar-5" class="next"></a>
+            <a href="#portfolio" class="close" title="close">&times;</a>
+        </div>
+    </div>
+    <div class="overlay" id="gambar-5">
+        <div class="kotak">
+            <a href="#gambar-4" class="prev"></a>
+            <img src="img/portfolio/persona1.jpg" alt="Persona 3">
+            <a href="#gambar-6" class="next"></a>
+            <a href="#portfolio" class="close" title="close">&times;</a>
+        </div>
+    </div>
+    <div class="overlay" id="gambar-6">
+        <div class="kotak">
+            <a href="#gambar-5" class="prev"></a>
+            <img src="img/portfolio/raptor.png" alt="Jets with Leader">
+            <a href="#gambar-1" class="next"></a>
+            <a href="#portfolio" class="close" title="close">&times;</a>
+        </div>
+    </div>
 
+    <!-- Akhir Overlay -->
 
     <!-- Awal Contact -->
     <section class="contact" id="contact">
@@ -235,6 +294,37 @@
                     <a href="https://www.youtube.com/webprogrammingunpas" class="btn btn-danger" target="_blank">
                         <i class="glyphicon glyphicon-play"></i> Subscribe to YouTube
                     </a>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/adipatima" target="_blank" alt="facebook"
+                                title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/adi_loc30" target="_blank" alt="twitter" title="Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/adipati_ma" target="_blank" alt="instagram"
+                                title="Instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/adipati27ma" target="_blank" alt="github" title="GitHub">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </li>
+                    </ul cla>
                 </div>
             </div>
         </div>

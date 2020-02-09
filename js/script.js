@@ -25,9 +25,9 @@ $('.page-scroll').on('click', function (event) {
 
 
 // onload, show top page
-// $(document).ready(function () {
-//     $(document).scrollTop(0);
-// });
+$(document).ready(function () {
+    $(document).scrollTop(0);
+});
 
 // unable scroll
 $('html').css('overflow', 'hidden');

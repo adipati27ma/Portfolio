@@ -1,12 +1,30 @@
 body {
     margin-top: 25px;
     opacity: 0;
-    transition: 2s;
+    transition: 1s;
+    font-family: "Exo 2", cursive;
+    color: black;
+
 }
 
 body.bAppear {
     opacity: 1;
 }
+
+
+.navbar-inverse {
+    background-color: rgb(0, 8, 54);
+}
+
+
+#nav-list {
+    color: white;
+}
+
+#nav-list:hover {
+    color: rgb(183, 235, 255);
+}
+
 
 .jumbotron {
     color: white;
@@ -40,13 +58,13 @@ body.bAppear {
 
 .jumbotron img {
     width: 200px;
-    border: 5px solid #666;
+    border: 5px solid rgba(50, 40, 190, 0.411);
 
 }
 
 section hr {
     width: 230px;
-    border-top: 3px solid #aaa;
+    border-top: 3px solid rgb(96, 87, 224);
 }
 
 section,
@@ -62,7 +80,8 @@ footer.Appear {
 }
 
 section:nth-child(even) {
-    background-color: #eee;
+    background-color: rgb(221, 224, 253);
+    grad;
 }
 
 .pKiri,
@@ -115,7 +134,7 @@ footer {
     bottom: 0; */
     width: 100%;
     min-height: 120px;
-    background-color: #555;
+    background-color: rgb(0, 8, 54);
 }
 
 footer p {
@@ -128,5 +147,157 @@ footer p {
 
 footer a {
     white-space: unset;
+    color: skyblue;
+}
 
+footer ul li {
+    display: inline-block;
+    margin-right: 18px;
+}
+
+footer i.fa {
+    color: white;
+    font-size: 20px;
+}
+
+footer i.fa:hover {
+    color: rgb(183, 235, 255);
+}
+
+
+
+/* Overlay */
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 5;
+    transition: .5s;
+    text-align: center;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    overflow: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .8);
+    padding: 5px;
+}
+
+.overlay img {
+    max-height: 99%;
+    max-width: auto;
+    filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.8));
+}
+
+.overlay:target img {
+    animation: zoomAndFade .8s forwards;
+}
+
+.kotak {
+    margin-top: 70px;
+}
+
+.close {
+    position: absolute;
+    color: white;
+    display: inline-block;
+    background-color: rgba(200, 200, 200, .5);
+    width: 30px;
+    border: 2px solid rgb(87, 87, 87);
+    filter: opacity(0);
+}
+
+.overlay a.close:hover {
+    color: white;
+    background-color: rgb(87, 87, 87);
+    border: 2px solid rgba(200, 200, 200, .5);
+    box-shadow: 3px -3px 10px skyblue;
+}
+
+.overlay:target .close {
+    animation: slideDownFade .8s .25s forwards;
+    box-shadow: 3px -3px 10px 5px blue;
+}
+
+/* Navigasi Overlay */
+.next {
+    width: 52px;
+    height: 52px;
+    background-image: url(../img/next.png);
+    position: absolute;
+    top: 40%;
+    margin-left: 20px;
+    opacity: .7;
+    filter: drop-shadow(5px 5px 10px blue);
+}
+
+.prev {
+    width: 52px;
+    height: 52px;
+    background-image: url(../img/prev.png);
+    position: absolute;
+    top: 41%;
+    margin-left: -80px;
+    opacity: .7;
+    filter: drop-shadow(5px 5px 10px blue);
+
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+    animation: fadeIn .8s .25s alternate;
+}
+
+.overlay a.next:hover,
+.overlay a.prev:hover {
+    opacity: 1;
+    filter: drop-shadow(2px 2px 5px skyblue);
+}
+
+/* Animasi */
+
+@keyframes fadeIn {
+    0% {
+        opacity: .2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@keyframes zoomAndFade {
+    0% {
+        transform: scale(0);
+        filter: opacity(0);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: opacity(1);
+    }
+}
+
+@keyframes slideDownFade {
+    0% {
+        filter: opacity(0);
+        margin-top: -20px;
+    }
+
+    100% {
+        filter: opacity(1);
+        margin-top: 0;
+    }
 }
