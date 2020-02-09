@@ -1,0 +1,132 @@
+body {
+    margin-top: 25px;
+    opacity: 0;
+    transition: 2s;
+}
+
+body.bAppear {
+    opacity: 1;
+}
+
+.jumbotron {
+    color: white;
+    background-image: url('../img/earthnetwork-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -20px;
+    overflow: hidden;
+}
+
+.jumbotron h1,
+.jumbotron p {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+
+.jumbotron img,
+.jumbotron h1,
+.jumbotron p {
+    filter: opacity(0);
+    transform: translateY(-50px);
+    transition: 1s;
+}
+
+.jumbotron img.jAppear,
+.jumbotron h1.jAppear,
+.jumbotron p.jAppear {
+    filter: opacity(1);
+    transform: translateY(0);
+}
+
+
+.jumbotron img {
+    width: 200px;
+    border: 5px solid #666;
+
+}
+
+section hr {
+    width: 230px;
+    border-top: 3px solid #aaa;
+}
+
+section,
+footer {
+    min-height: 600px;
+    opacity: 0;
+    transition: 1s;
+}
+
+section.Appear,
+footer.Appear {
+    opacity: 1;
+}
+
+section:nth-child(even) {
+    background-color: #eee;
+}
+
+.pKiri,
+.pKanan {
+    transform: translate(-50px, 0);
+    opacity: 0;
+    transition: 1s;
+}
+
+.pKanan {
+    transform: translate(50px, 0);
+}
+
+.pKiri.pAppear,
+.pKanan.pAppear {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.portfolio .thumbnail.t1 {
+    filter: opacity(0);
+    transition: .8s;
+    transform: translateY(-20px);
+}
+
+.portfolio .thumbnail.t1.appears {
+    filter: opacity(1);
+    transform: translateY(0px);
+
+}
+
+.portfolio .thumbnail.t2 {
+    filter: opacity(0);
+    transition: .8s;
+    transform: translateY(-20px);
+}
+
+.portfolio .thumbnail.t2.appears {
+    filter: opacity(1);
+    transform: translateY(0px);
+
+}
+
+.contact {
+    min-height: 900px;
+}
+
+footer {
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+    min-height: 120px;
+    background-color: #555;
+}
+
+footer p {
+    color: white;
+    font-size: 0.9em;
+    padding-top: 33px;
+    letter-spacing: 0.4rem;
+    white-space: unset;
+}
+
+footer a {
+    white-space: unset;
+
+}
