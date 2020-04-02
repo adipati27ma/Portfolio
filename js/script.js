@@ -14,7 +14,7 @@ $('.page-scroll').on('click', function (event) {
     // $('html, body').scrollTop('700');
 
     $('html, body').animate({
-        scrollTop: elemenTujuan.offset().top - 40
+        scrollTop: elemenTujuan.offset().top - 35
     }, 1200, 'easeInOutExpo');
 
 
@@ -126,6 +126,21 @@ $(window).scroll(function () {
             $('.portfolio .thumbnail.t2').removeClass('appears');
 
         });
+    }
+
+
+    // Navbar hilangkan
+    if (wScroll < 438) {
+        // $('nav').removeClass('navbar-inverse');
+
+        $('nav.navbar-inverse').css('backgroundColor', 'rgba(0, 8, 54, 0)');
+        $('nav.navbar-inverse').removeClass('navbar');
+    }
+
+    // Navbar tampilkan
+    if (wScroll > 410) {
+        $('nav.navbar-inverse').addClass('navbar');
+        $('nav.navbar-inverse').css('backgroundColor', 'rgba(0, 8, 54, .68)');
     }
 
 });

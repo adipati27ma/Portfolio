@@ -1,5 +1,17 @@
+@font-face {
+    font-family: "Bebas Neue";
+
+    src: url(../fonts/BebasNeue-Regular.woff) format('woff');
+}
+
+/* @font-face {
+    font-family: "Exo 2";
+
+    src: url(../fonts/exo2-medium-webfont.woff) format('woff');
+} */
+
 body {
-    margin-top: 25px;
+    /* margin-top: 25px; */
     opacity: 0;
     transition: 1s;
     font-family: "Exo 2", cursive;
@@ -7,22 +19,63 @@ body {
 
 }
 
+@media only screen and (max-width: 800px) {
+    body {
+        font-family: arial, sans-serif;
+    }
+
+    .next {
+        width: 52px;
+        height: 52px;
+        background-image: url(../img/next.png);
+        position: absolute;
+        /* top: 40%; */
+        /* margin-left: 20px; */
+        opacity: .4;
+        filter: drop-shadow(5px 5px 10px blue);
+    }
+
+    .prev {
+        width: 52px;
+        height: 52px;
+        background-image: url(../img/prev.png);
+        position: absolute;
+        /* top: 40%; */
+        /* margin-left: -80px; */
+        opacity: .4;
+        filter: drop-shadow(5px 5px 10px blue);
+    }
+
+}
+
 body.bAppear {
     opacity: 1;
 }
 
-
 .navbar-inverse {
-    background-color: rgb(0, 8, 54);
+    background-color: rgba(0, 8, 54, 0);
 }
 
+/* .navbar-transparant {
+    background-color: rgba(0, 8, 54, 0);
+} */
 
-#nav-list {
+
+#nav-list,
+#nav-title {
     color: white;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#nav-title:hover {
+    color: rgba(206, 241, 255, 0.3);
 }
 
 #nav-list:hover {
-    color: rgb(183, 235, 255);
+    color: rgba(206, 241, 255, 0.3);
+    display: inline-block;
+    background-color: rgba(206, 241, 255, 0.3);
 }
 
 
@@ -58,9 +111,10 @@ body.bAppear {
 
 .jumbotron img {
     width: 200px;
-    border: 5px solid rgba(50, 40, 190, 0.411);
-
+    border: 2px solid rgba(206, 241, 255, 0.411);
+    margin-top: 25px;
 }
+
 
 section hr {
     width: 230px;
@@ -81,7 +135,6 @@ footer.Appear {
 
 section:nth-child(even) {
     background-color: rgb(221, 224, 253);
-    grad;
 }
 
 .pKiri,
@@ -192,8 +245,8 @@ footer i.fa:hover {
 }
 
 .overlay img {
-    max-height: 99%;
-    max-width: auto;
+    max-height: 100%;
+    max-width: 100%;
     filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.8));
 }
 
