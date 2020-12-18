@@ -163,7 +163,6 @@ section:nth-child(even) {
 .portfolio .thumbnail.t1.appears {
     filter: opacity(1);
     transform: translateY(0px);
-
 }
 
 .portfolio .thumbnail.t2 {
